@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local agent tooling state (not part of the project)
+/.atl/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
