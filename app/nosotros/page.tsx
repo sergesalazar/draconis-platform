@@ -17,7 +17,7 @@ export default function NosotrosPage() {
         <PageHeader
           eyebrow="Nosotros"
           title="Draconis Enterprise"
-          description="Una agencia curatorial que acompaña carreras a largo plazo, no una agencia de volumen."
+          description="Empresa cultural mexicana dedicada al desarrollo, representación y producción de talento artístico, desde la cultura hip-hop hacia el teatro, la música, lo audiovisual y la literatura."
         />
         <AboutContent />
         <ClosingBanner

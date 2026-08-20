@@ -3,26 +3,26 @@ import type { Service } from "@/types/services";
 export const services: Service[] = [
   {
     number: "01",
-    title: "Representación & Booking",
+    title: "Representación de Talento Audiovisual",
     description:
-      "Negociación y gestión de contratos con marcas, productoras y plataformas.",
+      "Desarrollo y representación profesional de actores, directores y cantantes para la industria audiovisual.",
   },
   {
     number: "02",
-    title: "Manejo de Marca Personal",
+    title: "Gestión de Obras y Derechos Literarios",
     description:
-      "Estrategia de imagen y posicionamiento a mediano y largo plazo.",
+      "Administración, protección y licenciamiento de obras dramáticas, guiones, libros y otros contenidos literarios.",
   },
   {
     number: "03",
-    title: "Producción de Contenido",
+    title: "Producción y Administración Musical",
     description:
-      "Dirección creativa y producción audiovisual de alto nivel.",
+      "Producción de proyectos musicales, administración de repertorios y gestión de derechos y catálogos.",
   },
   {
     number: "04",
-    title: "Desarrollo de Carrera",
+    title: "Circulación y Booking",
     description:
-      "Acompañamiento estratégico en cada etapa de la trayectoria del talento.",
+      "Gestión de presentaciones, giras y vinculación con teatros, foros, festivales y otros espacios culturales.",
   },
 ];

@@ -1,4 +1,11 @@
-export type TalentCategory = "actuacion" | "modelaje" | "contenido" | "conduccion";
+export type TalentCategory =
+  | "actores-actrices"
+  | "directores"
+  | "guionistas"
+  | "cantantes-raperos"
+  | "musicos"
+  | "productores-musicales"
+  | "compositores";
 
 export interface TalentVital {
   label: string;

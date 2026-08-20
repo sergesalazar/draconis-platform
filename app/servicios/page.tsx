@@ -18,7 +18,7 @@ export default function ServiciosPage() {
         <PageHeader
           eyebrow="Servicios"
           title="Cómo trabajamos"
-          description="Representación integral pensada para carreras de largo plazo, no para apariciones aisladas."
+          description="Representación audiovisual, gestión de derechos literarios, producción musical y circulación de presentaciones culturales."
         />
         <section className="bg-[var(--color-paper)] pb-24 sm:pb-32">
           <Container>

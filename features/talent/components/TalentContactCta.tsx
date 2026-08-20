@@ -6,7 +6,7 @@ interface TalentContactCtaProps {
 }
 
 export default function TalentContactCta({ talent }: TalentContactCtaProps) {
-  const mailtoHref = `mailto:hola@draconisenterprise.com?subject=${encodeURIComponent(
+  const mailtoHref = `mailto:contacto@draconisenterprise.com?subject=${encodeURIComponent(
     `Interés en ${talent.name}`,
   )}`;
 

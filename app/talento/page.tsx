@@ -18,7 +18,7 @@ export default function TalentoPage() {
         <PageHeader
           eyebrow="Talento"
           title="Nuestro roster"
-          description="Actores, modelos, creadores de contenido y conductores representados con visión estratégica y acompañamiento a largo plazo."
+          description="Actores y actrices, directores, guionistas y dramaturgos, cantantes y raperos, músicos, productores musicales y compositores impulsados desde la cultura hip-hop hacia el teatro, la música y lo audiovisual."
         />
         <section className="bg-[var(--color-paper)] pb-24 sm:pb-32">
           <Container>

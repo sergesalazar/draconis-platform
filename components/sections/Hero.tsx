@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -24,23 +25,30 @@ export default function Hero() {
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
         }}
       />
-      <span
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[0.15em] right-[-0.05em] select-none font-[family-name:var(--font-fraunces)] text-[28vw] italic leading-none text-[var(--color-obsidian-foreground)]/[0.04] sm:text-[22vw]"
+        className="pointer-events-none absolute -bottom-[20vw] -right-[20vw] h-[70vw] w-[70vw] opacity-[0.14] sm:-bottom-[13vw] sm:-right-[13vw] sm:h-[46vw] sm:w-[46vw]"
       >
-        D
-      </span>
+        <Image
+          src="/images/logo-blanco.webp"
+          alt=""
+          fill
+          sizes="70vw"
+          className="object-contain"
+        />
+      </div>
 
       <Container className="relative z-10 pt-24">
         <SectionLabel tone="dark">
-          Agencia de representación de talento
+          Empresa cultural mexicana
         </SectionLabel>
         <h1 className="mt-6 max-w-4xl font-[family-name:var(--font-fraunces)] text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-          El talento correcto, en el momento correcto.
+          El lugar donde puedes brillar.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted-dark)]">
-          Representamos actores, modelos y creadores con visión estratégica y
-          una mirada cinematográfica.
+          Desarrollamos, representamos y producimos talento artístico desde la
+          cultura hip-hop hacia el teatro, la música, los medios audiovisuales
+          y la literatura.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button href="/talento/" variant="primary" tone="dark">

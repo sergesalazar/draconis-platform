@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,11 +23,11 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "Draconis Enterprise — Representación de Talento",
+    default: "Draconis Enterprise — El lugar donde puedes brillar",
     template: "%s — Draconis Enterprise",
   },
   description:
-    "Agencia de representación de talento para actores, modelos y creadores de contenido, con una mirada estratégica y cinematográfica.",
+    "Empresa cultural mexicana dedicada al desarrollo, representación y producción de talento artístico, desde la cultura hip-hop hacia el teatro, la música, los medios audiovisuales y la literatura.",
 };
 
 export default function RootLayout({
@@ -39,7 +40,10 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
@@ -13,9 +14,19 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--color-line-dark)] bg-[var(--color-obsidian)]/80 backdrop-blur-md">
       <nav aria-label="Principal">
         <Container className="flex items-center justify-between py-5">
-          <span className="text-sm font-semibold tracking-[0.3em] text-[var(--color-obsidian-foreground)]">
-            DRACONIS
-          </span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/logo-blanco.webp"
+              alt="Draconis Enterprise"
+              width={48}
+              height={45}
+              className="h-12 w-auto"
+              priority
+            />
+            <span className="whitespace-nowrap text-[11px] font-semibold tracking-[0.12em] text-[var(--color-obsidian-foreground)] sm:text-xs sm:tracking-[0.2em]">
+              DRACONIS ENTERPRISE
+            </span>
+          </Link>
 
           <div className="hidden items-center gap-10 md:flex">
             {navLinks.map((link) => (
