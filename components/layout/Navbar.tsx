@@ -16,7 +16,7 @@ export default function Navbar() {
         <Container className="flex items-center justify-between py-5">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo-blanco.webp"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-blanco.webp`}
               alt="Draconis Enterprise"
               width={48}
               height={45}

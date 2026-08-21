@@ -30,7 +30,7 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-[20vw] -right-[20vw] h-[70vw] w-[70vw] opacity-[0.14] sm:-bottom-[13vw] sm:-right-[13vw] sm:h-[46vw] sm:w-[46vw]"
       >
         <Image
-          src="/images/logo-blanco.webp"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-blanco.webp`}
           alt=""
           fill
           sizes="70vw"
