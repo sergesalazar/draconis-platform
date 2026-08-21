@@ -65,7 +65,19 @@ export default function Footer() {
 
       <div className="border-t border-[var(--color-line-dark)]">
         <Container className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-[var(--color-muted-dark)] sm:flex-row">
-          <p>© 2026 Draconis Enterprise. Todos los derechos reservados.</p>
+          <p>
+            © 2026 Draconis Enterprise. Todos los derechos reservados.
+            {" "}Desarrollado por{" "}
+            <a
+              href="https://sstmexico.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-obsidian-foreground)] transition-colors motion-safe:duration-300 hover:text-[var(--color-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+            >
+              SSTMéxico
+            </a>
+            .
+          </p>
           <div className="flex gap-6">
             <Link
               href="/politica-privacidad"
