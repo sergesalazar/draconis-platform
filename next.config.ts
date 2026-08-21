@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.GITHUB_PAGES ? "/draconis-platform" : "";
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath,
+  assetPrefix: basePath,
   images: {
     unoptimized: true,
     remotePatterns: [
