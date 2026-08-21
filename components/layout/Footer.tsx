@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { navLinks } from "@/components/layout/nav-links";
@@ -8,7 +9,18 @@ export default function Footer() {
     <footer className="bg-[var(--color-obsidian)] text-[var(--color-obsidian-foreground)]">
       <Container className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-3 sm:py-20">
         <div>
-          <p className="text-sm font-semibold tracking-[0.3em]">DRACONIS</p>
+          <div className="flex items-center gap-3">
+            <Image
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-blanco.webp`}
+              alt="Draconis Enterprise"
+              width={40}
+              height={38}
+              className="h-10 w-auto"
+            />
+            <p className="text-sm font-semibold tracking-[0.2em]">
+              DRACONIS ENTERPRISE
+            </p>
+          </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-muted-dark)]">
             Empresa cultural mexicana dedicada al desarrollo, representación y
             producción de talento artístico.
