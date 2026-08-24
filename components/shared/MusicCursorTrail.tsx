@@ -25,14 +25,12 @@ export default function MusicCursorTrail() {
 
   useEffect(() => {
     const fineMedia = window.matchMedia("(pointer: fine)");
-    const motionMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const updateEnabled = () => {
-      enabledRef.current = fineMedia.matches && !motionMedia.matches;
+      enabledRef.current = fineMedia.matches;
     };
     updateEnabled();
     fineMedia.addEventListener("change", updateEnabled);
-    motionMedia.addEventListener("change", updateEnabled);
 
     function handleMouseMove(event: MouseEvent) {
       if (!enabledRef.current) return;
@@ -69,7 +67,6 @@ export default function MusicCursorTrail() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       fineMedia.removeEventListener("change", updateEnabled);
-      motionMedia.removeEventListener("change", updateEnabled);
     };
   }, []);
 
