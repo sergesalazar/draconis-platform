@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimatedWords from "@/components/shared/AnimatedWords";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -42,9 +43,11 @@ export default function Hero() {
         <SectionLabel tone="dark">
           Empresa cultural mexicana
         </SectionLabel>
-        <h1 className="mt-6 max-w-4xl font-[family-name:var(--font-fraunces)] text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-          El lugar donde puedes brillar.
-        </h1>
+        <AnimatedWords
+          as="h1"
+          text="El lugar donde puedes brillar."
+          className="mt-6 max-w-4xl font-[family-name:var(--font-fraunces)] text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+        />
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted-dark)]">
           Desarrollamos, representamos y producimos talento artístico desde la
           cultura hip-hop hacia el teatro, la música, los medios audiovisuales
