@@ -37,3 +37,15 @@ body {
      it correctly) — reference the next/font variable directly instead. */
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+@keyframes cursor-note-float {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) translate(0, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(var(--drift), -48px)
+      rotate(var(--rotate));
+  }
+}
