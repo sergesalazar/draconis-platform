@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import AnimatedWords from "@/components/shared/AnimatedWords";
 import Container from "@/components/ui/Container";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { categories } from "@/features/talent/categories";
@@ -38,11 +37,9 @@ export default function TalentProfileHero({ talent }: TalentProfileHeroProps) {
 
           <div>
             <SectionLabel tone="light">{categoryLabel}</SectionLabel>
-            <AnimatedWords
-              as="h1"
-              text={talent.name}
-              className="mt-6 font-[family-name:var(--font-fraunces)] text-4xl font-medium tracking-tight text-[var(--color-ink)] sm:text-5xl"
-            />
+            <h1 className="mt-6 font-[family-name:var(--font-fraunces)] text-4xl font-medium tracking-tight text-[var(--color-ink)] sm:text-5xl">
+              {talent.name}
+            </h1>
             <p className="mt-2 text-sm uppercase tracking-[0.15em] text-[var(--color-muted)]">
               {talent.role}
             </p>
