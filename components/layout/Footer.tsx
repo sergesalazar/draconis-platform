@@ -6,7 +6,10 @@ import { whatsappLink } from "@/features/contact/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-obsidian)] text-[var(--color-obsidian-foreground)]">
+    <footer
+      id="site-footer"
+      className="bg-[var(--color-obsidian)] text-[var(--color-obsidian-foreground)]"
+    >
       <Container className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-3 sm:py-20">
         <div>
           <div className="flex items-center gap-3">
