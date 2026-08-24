@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
-import MusicCursorTrail from "@/components/shared/MusicCursorTrail";
+import SpotlightCursorTrail from "@/components/shared/SpotlightCursorTrail";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <WhatsAppButton />
-        <MusicCursorTrail />
+        <SpotlightCursorTrail />
       </body>
     </html>
   );

@@ -38,14 +38,13 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-@keyframes cursor-note-float {
+@keyframes spotlight-fade {
   0% {
-    opacity: 0.9;
-    transform: translate(-50%, -50%) translate(0, 0) rotate(0deg);
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) translate(var(--drift), -48px)
-      rotate(var(--rotate));
+    transform: translate(-50%, -50%) scale(0.35);
   }
 }
