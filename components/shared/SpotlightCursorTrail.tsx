@@ -34,7 +34,7 @@ export default function SpotlightCursorTrail() {
 
       if (spotlightRef.current) {
         spotlightRef.current.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-        spotlightRef.current.style.opacity = "1";
+        spotlightRef.current.style.opacity = "0.45";
       }
 
       const now = performance.now();
@@ -46,7 +46,7 @@ export default function SpotlightCursorTrail() {
         id,
         x: event.clientX,
         y: event.clientY,
-        size: 26 + Math.random() * 18,
+        size: 12 + Math.random() * 10,
       };
 
       setTrail((prev) => {
@@ -95,19 +95,18 @@ export default function SpotlightCursorTrail() {
             width: glow.size,
             height: glow.size,
             background:
-              "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)",
-            filter: "blur(6px)",
+              "radial-gradient(circle, #ffffff 0%, transparent 70%)",
+            filter: "blur(4px)",
             animation: `spotlight-fade ${PARTICLE_LIFETIME_MS}ms ease-out forwards`,
           }}
         />
       ))}
       <div
         ref={spotlightRef}
-        className="absolute -left-24 -top-24 size-48 rounded-full opacity-0 transition-opacity motion-safe:duration-300"
+        className="absolute -left-14 -top-14 size-28 rounded-full opacity-0 transition-opacity motion-safe:duration-300"
         style={{
-          background:
-            "radial-gradient(circle, var(--color-accent) 0%, transparent 65%)",
-          filter: "blur(14px)",
+          background: "radial-gradient(circle, #ffffff 0%, transparent 65%)",
+          filter: "blur(10px)",
         }}
       />
     </div>
