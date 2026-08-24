@@ -78,8 +78,7 @@ export default function Footer() {
       <div className="border-t border-[var(--color-line-dark)]">
         <Container className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-[var(--color-muted-dark)] sm:flex-row">
           <p>
-            © 2026 Draconis Enterprise. Todos los derechos reservados.
-            {" "}Desarrollado por{" "}
+            © 2026 Draconis Enterprise. By{" "}
             <a
               href="https://sstmexico.com"
               target="_blank"
@@ -88,7 +87,6 @@ export default function Footer() {
             >
               SSTMéxico
             </a>
-            .
           </p>
           <div className="flex gap-6">
             <Link
