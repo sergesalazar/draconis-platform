@@ -8,4 +8,5 @@ export const categories: { value: TalentCategory; label: string }[] = [
   { value: "musicos", label: "Músicos" },
   { value: "productores-musicales", label: "Productores Musicales" },
   { value: "compositores", label: "Compositores" },
+  { value: "bailarines", label: "Bailarines" },
 ];

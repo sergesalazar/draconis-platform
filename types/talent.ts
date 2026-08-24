@@ -5,7 +5,8 @@ export type TalentCategory =
   | "cantantes-raperos"
   | "musicos"
   | "productores-musicales"
-  | "compositores";
+  | "compositores"
+  | "bailarines";
 
 export interface TalentVital {
   label: string;

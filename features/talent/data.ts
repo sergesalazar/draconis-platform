@@ -152,4 +152,29 @@ export const talents: Talent[] = [
       { label: "Especialidades", value: "Narrativa urbana" },
     ],
   },
+  {
+    slug: "ximena-cordero",
+    name: "Ximena Cordero",
+    role: "Bailarina",
+    category: "bailarines",
+    featured: true,
+    portraitSeed: 18,
+    bio: "Ximena se formó en danza urbana y contemporánea, y hoy encabeza montajes que llevan el hip-hop a escenarios de teatro y festivales del Estado de México.",
+    vitals: [
+      { label: "Estilos", value: "Hip-hop, Danza contemporánea" },
+      { label: "Especialidades", value: "Coreografía, Dirección de cuerpo de baile" },
+    ],
+  },
+  {
+    slug: "bruno-alcocer",
+    name: "Bruno Alcocer",
+    role: "Bailarín",
+    category: "bailarines",
+    portraitSeed: 41,
+    bio: "Bruno viene de la escena de battles urbanos y complementa presentaciones en vivo y producciones audiovisuales con un lenguaje corporal de raíz callejera.",
+    vitals: [
+      { label: "Estilos", value: "Breaking, Freestyle urbano" },
+      { label: "Especialidades", value: "Battles, Performance en vivo" },
+    ],
+  },
 ];
