@@ -11,6 +11,7 @@ interface AdminUploadFormProps {
   credentials: WordPressCredentials;
   onSessionExpired: () => void;
   onPublished: (link: string) => void;
+  onManage: () => void;
 }
 
 const ALLOWED_MIME_TYPES = [
@@ -31,6 +32,7 @@ export default function AdminUploadForm({
   credentials,
   onSessionExpired,
   onPublished,
+  onManage,
 }: AdminUploadFormProps) {
   const [type, setType] = useState<UpdateType>("promocion");
   const [title, setTitle] = useState("");
@@ -108,9 +110,18 @@ export default function AdminUploadForm({
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
-      <h2 className="font-[family-name:var(--font-fraunces)] text-2xl font-medium">
-        Nueva publicación
-      </h2>
+      <div className="flex items-center justify-between">
+        <h2 className="font-[family-name:var(--font-fraunces)] text-2xl font-medium">
+          Nueva publicación
+        </h2>
+        <button
+          type="button"
+          onClick={onManage}
+          className="text-xs uppercase tracking-[0.1em] text-[var(--color-accent)] hover:underline"
+        >
+          Ver publicaciones
+        </button>
+      </div>
 
       <label className="text-sm">
         Tipo

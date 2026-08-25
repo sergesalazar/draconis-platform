@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import AdminAuthForm from "@/features/admin/components/AdminAuthForm";
 import AdminUploadForm from "@/features/admin/components/AdminUploadForm";
+import AdminManageList from "@/features/admin/components/AdminManageList";
 import AdminSuccessPanel from "@/features/admin/components/AdminSuccessPanel";
 import { getStoredCredentials } from "@/features/admin/session";
 import type { WordPressCredentials } from "@/types/updates";
@@ -14,6 +15,7 @@ interface AdminPanelModalProps {
 type Step =
   | { name: "auth" }
   | { name: "form"; credentials: WordPressCredentials }
+  | { name: "manage"; credentials: WordPressCredentials }
   | { name: "success"; credentials: WordPressCredentials; link: string };
 
 export default function AdminPanelModal({ onClose }: AdminPanelModalProps) {
@@ -69,6 +71,19 @@ export default function AdminPanelModal({ onClose }: AdminPanelModalProps) {
             onSessionExpired={() => setStep({ name: "auth" })}
             onPublished={(link) =>
               setStep({ name: "success", credentials: step.credentials, link })
+            }
+            onManage={() =>
+              setStep({ name: "manage", credentials: step.credentials })
+            }
+          />
+        ) : null}
+
+        {step.name === "manage" ? (
+          <AdminManageList
+            credentials={step.credentials}
+            onSessionExpired={() => setStep({ name: "auth" })}
+            onBack={() =>
+              setStep({ name: "form", credentials: step.credentials })
             }
           />
         ) : null}

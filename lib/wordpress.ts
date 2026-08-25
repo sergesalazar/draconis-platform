@@ -125,6 +125,20 @@ export async function verifyWordPressCredentials(
   return { id: data.id, name: data.name };
 }
 
+export async function deleteUpdatePost(
+  postId: number,
+  credentials: WordPressCredentials,
+): Promise<void> {
+  const response = await fetch(`${WP_API_BASE}/posts/${postId}?force=true`, {
+    method: "DELETE",
+    headers: { Authorization: toBasicAuthHeader(credentials) },
+  });
+
+  if (!response.ok) {
+    await throwForErrorResponse(response);
+  }
+}
+
 export async function uploadMediaToWordPress(
   file: File,
   credentials: WordPressCredentials,
