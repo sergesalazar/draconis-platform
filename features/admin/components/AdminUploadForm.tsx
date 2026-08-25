@@ -120,7 +120,7 @@ export default function AdminUploadForm({
           className={inputClassName}
         >
           {(Object.keys(updateTypeLabels) as UpdateType[]).map((value) => (
-            <option key={value} value={value}>
+            <option key={value} value={value} className="text-black">
               {updateTypeLabels[value]}
             </option>
           ))}
