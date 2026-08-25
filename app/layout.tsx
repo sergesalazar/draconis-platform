@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import SpotlightCursorTrail from "@/components/shared/SpotlightCursorTrail";
+import AdminShortcutListener from "@/components/shared/AdminShortcutListener";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,6 +46,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <SpotlightCursorTrail />
+        <AdminShortcutListener />
       </body>
     </html>
   );
